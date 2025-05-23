@@ -149,14 +149,18 @@ function TimelineEvent({
   return (
     <motion.div
       ref={ref}
-      className={`mb-8 flex w-full items-start ${index % 2 === 0 ? "sm:flex-row-reverse" : ""}`}
+      className={`
+        mb-8 flex w-full items-start sm:items-center sm:justify-between
+        ${index % 2 === 0 ? "sm:flex-row-reverse" : ""}
+        flex-row
+      `}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
     >
-      {/* Spacer - hidden on mobile */}
-      <div className="hidden sm:block w-5/12" />
-      
+      {/* Spacer - hidden on mobile, shown on desktop for layout */}
+      <div className="hidden sm:block sm:w-5/12" />
+
       {/* Timeline dot */}
       <div className="z-20 mr-4 sm:mx-0">
         <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full">
@@ -165,10 +169,8 @@ function TimelineEvent({
       </div>
 
       {/* Content container */}
-      <div className="flex-1 sm:w-5/12">
-        {/* Main card */}
-        <motion.div
-          className="w-full cursor-pointer"
+      <motion.div
+          className="w-full sm:w-5/12 cursor-pointer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={onToggle}
@@ -190,8 +192,6 @@ function TimelineEvent({
             </motion.div>
           </div>
         </motion.div>
-        
-      </div>
     </motion.div>
   )
 }
