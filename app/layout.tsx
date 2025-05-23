@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Rocio Ferreiro | Creative Software Engineer & Blockchain Innovator",
+  title: "Rocio Ferreiro | Software Engineer & Blockchain Innovator",
   description: "Portfolio of Rocio Ferreiro, a software engineer specializing in blockchain and full-stack development.",
   openGraph: {
     title: "Rocio Ferreiro | Portfolio",
@@ -17,7 +17,7 @@ export const metadata = {
     url: "https://rocioferreiro.com",
     images: [
       {
-        url: "/og_image.png",
+        url: "https://rocioferreiro.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Rocio Ferreiro | Portfolio",
@@ -29,7 +29,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Rocio Ferreiro Portfolio",
     description: "Explore projects and expertise in blockchain, web, and mobile development.",
-    images: ["/og-image.png"],
+    images: ["https://rocioferreiro.com/og-image.png"],
   },
 }
 
