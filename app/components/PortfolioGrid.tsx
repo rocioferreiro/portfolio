@@ -57,7 +57,7 @@ const projects: ShowcaseItem[] = [
     description: "Leading blockchain innovation projects and worked in an EdTech platform called MundosE",
     image: "/projects/mundose.png?height=600&width=600",
     details: "Technologies: React, Next.js, Node.js, MongoDB, Solidity, Remix. MundosE offers university-level diplomas designed by top experts to maximize skill growth.",
-    categories: ["Leadership", "Blockchain", "Management", "EdTech"],
+    categories: ["Leadership", "Blockchain", "EdTech"],
     url: "https://getsein.com"
   },
   {
@@ -76,7 +76,7 @@ const projects: ShowcaseItem[] = [
     description: "A mini-game created for a R3AL Blocks marketing campaign to gamify real estate investing concepts.",
     image: "/projects/levelup.png?height=600&width=600",
     details: "Developed a browser-based interactive game to engage users with R3AL Blocks. Combined blockchain themes with fun mechanics to attract a broader audience.",
-    categories: ["Game", "Marketing", "Blockchain", "Creative Tech"],
+    categories: ["Game", "Marketing", "Creative Tech"],
     url: "https://levelup.r3al.io"
   },
   {
