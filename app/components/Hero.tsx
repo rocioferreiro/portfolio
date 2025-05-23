@@ -31,7 +31,7 @@ export default function Hero() {
           >
             <a
               href="#work"
-              className="clay-button"
+              className="gradient-button"
             >
               Explore My Work
             </a>
@@ -50,13 +50,21 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <div className="relative">
+          <div className="relative flex items-center justify-center">
+            {/* Gradient pulse background */}
+            <span
+              className="absolute inset-0 z-0 flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <span className="block w-[440px] h-[320px] rounded-[45%] bg-gradient-to-tr from-[#EC008C] to-[#FC6767] opacity-40 blur-2xl animate-pulse-gradient"></span>
+            </span>
+            {/* Hero image */}
             <img
               src="hero_image.png"
               alt="Developer"
               width={400}
               height={400}
-              className="w-[400px] rounded-2xl dark:shadow-xl dark:ring-1 dark:ring-gray-900/10"
+              className="relative z-10 w-[400px] rounded-2xl"
             />
           </div>
         </motion.div>

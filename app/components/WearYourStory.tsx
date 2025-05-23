@@ -26,7 +26,7 @@ export default function WearYourStory() {
           >
             <a
               href="#work"
-              className="clay-button inline-flex items-center"
+              className="gradient-button inline-flex items-center"
             >
               Explore Projects
               <svg
