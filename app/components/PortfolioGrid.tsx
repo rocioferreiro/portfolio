@@ -70,15 +70,15 @@ const projects: ShowcaseItem[] = [
     url: "https://www.infobae.com/tecno/2018/06/08/5-proyectos-innovadores-que-muestran-la-evolucion-de-la-plataforma-de-inteligencia-artificial-watson/"
   },
   
-  {
-    id: 7,
-    name: "R3AL Level Up – Game Marketing Campaign",
-    description: "A mini-game created for a R3AL Blocks marketing campaign to gamify real estate investing concepts.",
-    image: "/projects/levelup.png?height=600&width=600",
-    details: "Developed a browser-based interactive game to engage users with R3AL Blocks. Combined blockchain themes with fun mechanics to attract a broader audience.",
-    categories: ["Game", "Marketing", "Creative Tech"],
-    url: "https://levelup.r3al.io"
-  },
+  // {
+  //   id: 7,
+  //   name: "R3AL Level Up – Game Marketing Campaign",
+  //   description: "A mini-game created for a R3AL Blocks marketing campaign to gamify real estate investing concepts.",
+  //   image: "/projects/levelup.png?height=600&width=600",
+  //   details: "Developed a browser-based interactive game to engage users with R3AL Blocks. Combined blockchain themes with fun mechanics to attract a broader audience.",
+  //   categories: ["Game", "Marketing", "Creative Tech"],
+  //   url: "https://levelup.r3al.io"
+  // },
   {
     id: 8,
     name: "Window Progress Bar – React Component Library",
