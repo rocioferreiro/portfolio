@@ -114,7 +114,7 @@ export default function Timeline() {
           {/* Timeline Line */}
           <motion.div
             className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1 w-0.5 h-full bg-primary/20"
-            style={{ scaleY: scaleX }}
+            style={{ scaleY: scaleX, originY: 0 }}
           />
 
           {timelineEvents.map((event, index) => (
