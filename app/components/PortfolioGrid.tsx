@@ -39,7 +39,7 @@ const projects: ShowcaseItem[] = [
     description: "A mobile app that generates optimized travel plans based on user-selected attractions.",
     image: "/projects/thesis.png?height=600&width=600",
     details: "Tourismo helps travelers explore cities by creating efficient multi-day itineraries starting and ending at a custom point, like a hotel. Users can personalize, share, edit, and download their plans.",
-    categories: ["Mobile", "Automation", "Thesis"],
+    categories: ["Mobile", "Automation", "Thesis", "University"],
     url: "https://docs.google.com/presentation/d/1LHwhqucWRrkMSXUSczFg3o3dddurXwizj1mbH_1Lwyk/edit?usp=sharing"
   },
   {
