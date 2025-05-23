@@ -80,44 +80,58 @@ export default function Header() {
       {/* Mobile menu overlay */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-lg flex flex-col items-end md:hidden"
-          >
-            <button
-              className="m-6 p-2 rounded-full hover:bg-muted transition self-end"
-              aria-label="Close menu"
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-70"
               onClick={() => setMenuOpen(false)}
+            />
+            {/* Menu content */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="fixed right-0 top-0 bottom-0 w-full max-w-sm z-100 flex flex-col"
             >
-              <XMarkIcon className="h-7 w-7 text-foreground" />
-            </button>
-            <div className="flex flex-col items-center w-full gap-8 mt-12">
-              <Link
-                href="#work"
-                className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                Work
-              </Link>
-              <Link
-                href="#about"
-                className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="#contact"
-                className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
-          </motion.div>
+              <div className="flex justify-end p-4">
+                <button
+                  className="p-2 rounded-full hover:bg-muted transition"
+                  aria-label="Close menu"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <XMarkIcon className="h-6 w-6 text-foreground" />
+                </button>
+              </div>
+              <nav className="flex flex-col items-center justify-center flex-1 gap-8 bg-background/80 backdrop-blur-sm">
+                <Link
+                  href="#work"
+                  className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Work
+                </Link>
+                <Link
+                  href="#about"
+                  className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  href="#contact"
+                  className="text-lg font-semibold text-foreground hover:text-primary transition-colors pb-6"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>
