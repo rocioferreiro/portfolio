@@ -21,7 +21,7 @@ const projects: ShowcaseItem[] = [
     description: "Leading technology strategy and development at R3AL Blocks, a platform leveraging blockchain for real estate.",
     image: "/projects/r3al.png?height=600&width=600",
     details: "Overseeing tech team and product architecture for a blockchain-based real estate solution.",
-    categories: ["Leadership", "Blockchain", "RWA"],
+    categories: ["Leadership", "Blockchain", "RWA", "Innovation"],
     url: "https://r3al.io"
   },
   {
@@ -30,7 +30,7 @@ const projects: ShowcaseItem[] = [
     description: "1st place Chainlink bounty and 2nd overall for an educational subsidies system on Avalanche.",
     image: "/projects/vouch4edu.png?height=600&width=600",
     details: "Built with Solidity, ERC-1155, Chainlink Functions, Teleporter, and Next.js.",
-    categories: ["Hackathon", "Blockchain"],
+    categories: ["Hackathon", "Blockchain", "Innovation"],
     url: "https://www.canva.com/design/DAGSELH2eP8/LfqSA_WBk0HwRpADdm9v9g/edit?utm_content=DAGSELH2eP8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
   },
   {
@@ -48,7 +48,7 @@ const projects: ShowcaseItem[] = [
     description: "2nd place overall for a decentralized loyalty platform built on Polkadot.",
     image: "/projects/loybits.png?height=600&width=600",
     details: "Stack: Next.js, Tailwind, ink! smart contracts, Pinecone.",
-    categories: ["Hackathon", "Blockchain"],
+    categories: ["Hackathon", "Blockchain", "Innovation"],
     url: "https://loybits.vercel.app"
   },
   {
