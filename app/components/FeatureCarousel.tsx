@@ -37,9 +37,23 @@ export default function FeatureCarousel() {
   const x = useMotionValue(0)
   const controls = useAnimation()
 
+  // Recalculate width on resize and after images load
   useEffect(() => {
-    if (carousel.current) {
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+    function updateWidth() {
+      if (carousel.current) {
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+      }
+    }
+    updateWidth()
+    window.addEventListener("resize", updateWidth)
+    // Listen for images loading
+    const imgs = carousel.current?.querySelectorAll("img") || []
+    imgs.forEach(img => {
+      if (!img.complete) img.addEventListener("load", updateWidth)
+    })
+    return () => {
+      window.removeEventListener("resize", updateWidth)
+      imgs.forEach(img => img.removeEventListener("load", updateWidth))
     }
   }, [])
 
@@ -56,7 +70,7 @@ export default function FeatureCarousel() {
     <section id="value" className="py-20 bg-gradient-to-b from-background to-primary/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-foreground">The Value I Bring</h2>
-        <motion.div ref={carousel} className="cursor-grab overflow-hidden">
+        <motion.div ref={carousel} className="cursor-grab overflow-x-auto overflow-y-visible">
           <motion.div
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
@@ -69,14 +83,14 @@ export default function FeatureCarousel() {
             {features.map((feature, index) => (
               <motion.div
                 key={`${index}-${feature.title}`}
-                className="min-w-[300px] h-[400px] p-8 m-4 bg-background rounded-3xl shadow-lg flex flex-col justify-between hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
+                className="min-w-[85vw] max-w-[95vw] sm:min-w-[300px] sm:max-w-[340px] h-[400px] p-6 sm:p-8 m-2 sm:m-4 bg-background rounded-3xl shadow-lg flex flex-col justify-between hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
               >
                 <div>
-                  <div className="mb-4 h-[110px] items-center flex justify-center w-full">
-                    <img src={feature.icon} alt={feature.title} className="h-[85px]"/>
+                  <div className="mb-4 h-[90px] sm:h-[110px] items-center flex justify-center w-full">
+                    <img src={feature.icon} alt={feature.title} className="h-[70px] sm:h-[85px]" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
                 </div>
               </motion.div>
             ))}

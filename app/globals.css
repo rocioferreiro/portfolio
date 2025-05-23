@@ -42,10 +42,10 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217 77% 65%;
+    --primary: 197, 57%, 50%;
     --primary-foreground: 50 47.4% 98%;
     --shadow: 211 84% 50%;
-    --secondary: 353, 100%, 68%;
+    --secondary: 0, 96%, 70%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 40 15% 98%;
@@ -77,6 +77,17 @@
   @apply bg-primary text-white font-semibold py-3 px-6 rounded-full shadow-clay-inset-dark hover:shadow-clay-out-dark transition-all duration-300 ease-in-out;
 }
 
+.gradient-button {
+  @apply px-6 py-3 rounded-full text-white font-semibold transition-all duration-300 ease-in-out shadow-lg;
+  background: linear-gradient(90deg, #EC008C 0%, #FC6767 100%);
+  border: none;
+}
+
+.gradient-button:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+}
+
 .section-title {
   @apply text-4xl font-bold mb-8 text-center text-foreground;
 }
@@ -87,4 +98,19 @@
 
 .hover-lift {
   @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg;
+}
+
+@keyframes pulse-gradient {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-gradient {
+  animation: pulse-gradient 3.4s infinite;
 }

@@ -175,7 +175,7 @@ export default function PortfolioGrid() {
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.categories.map((category, index) => (
-                    <div key={`${index}-${category}`} className="text-sm font-medium text-white mb-1">{category}</div>
+                    <div key={`${index}-${category}`} className="text-sm font-medium text-black dark:text-white mb-1">{category}</div>
                   ))}
                   </div>
                   
