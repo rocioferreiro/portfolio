@@ -83,11 +83,11 @@ export default function FeatureCarousel() {
             {features.map((feature, index) => (
               <motion.div
                 key={`${index}-${feature.title}`}
-                className="min-w-[85vw] max-w-[95vw] sm:min-w-[300px] sm:max-w-[340px] h-[400px] p-6 sm:p-8 m-2 sm:m-4 bg-background rounded-3xl shadow-lg flex flex-col justify-between hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
+                className="min-w-[85vw] max-w-[95vw] sm:min-w-[300px] sm:max-w-[340px] h-[400px] p-6 sm:p-8 m-2 sm:m-4 bg-background rounded-3xl shadow-lg flex flex-col justify-center hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
               >
                 <div>
-                  <div className="mb-4 h-[90px] sm:h-[110px] items-center flex justify-center w-full">
-                    <img src={feature.icon} alt={feature.title} className="h-[70px] sm:h-[85px]" />
+                  <div className="mb-4 h-[110px] items-center flex justify-center w-full">
+                    <img src={feature.icon} alt={feature.title} className="h-[85px]" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm sm:text-base">{feature.description}</p>
