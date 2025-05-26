@@ -18,9 +18,9 @@ const projects: ShowcaseItem[] = [
   {
     id: 1,
     name: "R3AL Blocks – CTO",
-    description: "Leading technology strategy and development at R3AL Blocks, a platform leveraging blockchain for real estate.",
+    description: "Leading technology strategy and development at R3AL Blocks, a platform leveraging blockchain for real world assets.",
     image: "/projects/r3al.png?height=600&width=600",
-    details: "Overseeing tech team and product architecture for a blockchain-based real estate solution.",
+    details: "Overseeing tech team and product architecture for a blockchain-based financial solution.",
     categories: ["Leadership", "Blockchain", "RWA", "Innovation"],
     url: "https://r3al.io"
   },
