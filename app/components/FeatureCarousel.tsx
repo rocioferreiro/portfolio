@@ -6,7 +6,7 @@ import { motion, useAnimation, useMotionValue } from "framer-motion"
 const features = [
   {
     title: "Full-Stack Expertise",
-    description: "From frontend polish to backend architecture, I deliver end-to-end solutions using modern tools like Next.js, Node.js, and Solidity.",
+    description: "From frontend polish to backend architecture, I deliver end-to-end solutions using modern tools like Next.js, Nest.js, Solidity, and more.",
     icon: "value_icons/stack.png",
   },
   {
@@ -20,8 +20,8 @@ const features = [
     icon: "value_icons/clock.png",
   },
   {
-    title: "Specialized in Blockchain",
-    description: "I build secure, decentralized applications using smart contracts and tokenization protocols, with hands-on experience in Solidity and Web3.",
+    title: "Specialized in Emerging Tech",
+    description: "I have a strong focus on blockchain, automation and AI, leveraging my experience to create innovative solutions that drive business value.",
     icon: "value_icons/blockchain.png",
   },
   {
