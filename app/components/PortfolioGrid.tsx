@@ -35,6 +35,15 @@ const projects: ShowcaseItem[] = [
   },
   {
     id: 3,
+    name: "Nerdathon 2025 – SubText Wallet",
+    description: "Conversational wallet for Polkadot built on Discord to simplify blockchain interactions using natural language.",
+    image: "/projects/subtext_wallet.png?height=600&width=600",
+    details: "Built with Next.js, Discord API, polkadot.js, LangChain, Supabase, and OpenAI. Supports wallet creation, balance checking, on-chain transfers, and XCM bridging with a natural language interface.",
+    categories: ["Hackathon", "Blockchain", "AI", "Innovation"],
+    url: "https://subtext-wallet-production.up.railway.app/"
+  },
+  {
+    id: 4,
     name: "Tourismo – Thesis Project",
     description: "A mobile app that generates optimized travel plans based on user-selected attractions.",
     image: "/projects/thesis.png?height=600&width=600",
@@ -43,7 +52,7 @@ const projects: ShowcaseItem[] = [
     url: "https://docs.google.com/presentation/d/1LHwhqucWRrkMSXUSczFg3o3dddurXwizj1mbH_1Lwyk/edit?usp=sharing"
   },
   {
-    id: 4,
+    id: 5,
     name: "Nerdathon 2024 – Polkadot Hackathon",
     description: "2nd place overall for a decentralized loyalty platform built on Polkadot.",
     image: "/projects/loybits.png?height=600&width=600",
@@ -52,7 +61,7 @@ const projects: ShowcaseItem[] = [
     url: "https://loybits.vercel.app"
   },
   {
-    id: 5,
+    id: 6,
     name: "Get Sein – Technical Leader",
     description: "Leading blockchain innovation projects and worked in an EdTech platform called MundosE",
     image: "/projects/mundose.png?height=600&width=600",
@@ -61,7 +70,7 @@ const projects: ShowcaseItem[] = [
     url: "https://getsein.com"
   },
   {
-    id: 6,
+    id: 7,
     name: "IBM – Cloud Developer",
     description: "Worked on 'Emma', a 3D-printed cognitive assistant robot and developed institutional pages.",
     image: "/projects/emma.png?height=600&width=600",
