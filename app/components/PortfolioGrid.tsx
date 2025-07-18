@@ -113,11 +113,13 @@ const projects: ShowcaseItem[] = [
 const categories = ["All", ...Array.from(new Set(projects.flatMap((project) => project.categories)))]
 
 export default function PortfolioGrid() {
-  const [filter, setFilter] = useState("All")
+  const [selectedFilters, setSelectedFilters] = useState<string[]>(["All"])
 
-  const filteredProjects = filter === "All"
-  ? projects
-  : projects.filter((project) => project.categories.includes(filter))
+  const filteredProjects = selectedFilters.includes("All") || selectedFilters.length === 0
+    ? projects
+    : projects.filter((project) => 
+        project.categories.some(category => selectedFilters.includes(category))
+      )
 
   return (
     <section className="py-20 bg-background" id="work">
@@ -135,19 +137,42 @@ export default function PortfolioGrid() {
         </motion.div>
 
         <div className="flex justify-center space-x-4 mb-8 flex-wrap">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-4 py-2 mb-2 rounded-full text-sm font-medium transition-colors ${
-                filter === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+          {categories.map((category) => {
+            const isSelected = selectedFilters.includes(category);
+            
+            const handleFilterClick = () => {
+              if (category === "All") {
+                setSelectedFilters(["All"]);
+              } else {
+                setSelectedFilters(prev => {
+                  const withoutAll = prev.filter(f => f !== "All");
+                  
+                  if (prev.includes(category)) {
+                    // Remove the category
+                    const newFilters = withoutAll.filter(f => f !== category);
+                    return newFilters.length === 0 ? ["All"] : newFilters;
+                  } else {
+                    // Add the category
+                    return [...withoutAll, category];
+                  }
+                });
+              }
+            };
+
+            return (
+              <button
+                key={category}
+                onClick={handleFilterClick}
+                className={`px-4 py-2 mb-2 rounded-full text-sm font-medium transition-colors ${
+                  isSelected
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
 
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
