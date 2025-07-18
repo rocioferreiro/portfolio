@@ -5,8 +5,8 @@ import { motion, useScroll, useSpring, useInView } from "framer-motion"
 
 const timelineEvents = [
   {
-    year: 2024,
-    title: "Professor at Universidad Austral",
+    year: 2025,
+    title: "Professor at Universidad Austral - Current",
     description: "Teaching Coding courses.",
     details:
       "Joined as a professor in the Computer Engineering department, teaching Coding courses to undergraduate students. Focused on practical coding skills and software development best practices.",
@@ -20,7 +20,7 @@ const timelineEvents = [
   },
   {
     year: 2023,
-    title: "CTO at R3AL Blocks",
+    title: "CTO at R3AL Blocks - Current",
     description: "Leading technical strategy for blockchain startup.",
     details:
       "Began in March 2023, overseeing architecture, security, scalability, and innovation for a platform focused on real-world asset tokenization.",
