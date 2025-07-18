@@ -36,11 +36,11 @@ const projects: ShowcaseItem[] = [
   {
     id: 3,
     name: "Nerdathon 2025 – SubText Wallet",
-    description: "Conversational wallet for Polkadot built on Discord to simplify blockchain interactions using natural language.",
+    description: "1st place for a conversational wallet for Polkadot to simplify blockchain interactions using natural language.",
     image: "/projects/subtext_wallet.png?height=600&width=600",
     details: "Built with Next.js, Discord API, polkadot.js, LangChain, Supabase, and OpenAI. Supports wallet creation, balance checking, on-chain transfers, and XCM bridging with a natural language interface.",
     categories: ["Hackathon", "Blockchain", "AI", "Innovation"],
-    url: "https://subtext-wallet-production.up.railway.app/"
+    url: "https://subtext-wallet.vercel.app/"
   },
   {
     id: 4,
