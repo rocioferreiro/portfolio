@@ -4,16 +4,17 @@ import { motion } from "framer-motion"
 
 export default function Hero() {
   return (
-    <div className="relative isolate overflow-hidden bg-background">
+    <section className="relative isolate overflow-hidden bg-background" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0">
+        <header className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0">
           <motion.h1
+            id="hero-heading"
             className="mt-10 text-4xl font-bold text-foreground sm:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-gradient font-title">Rocio Ferreiro </span>
+            <span className="text-gradient font-title">Rocio Ferreiro</span>
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-muted-foreground"
@@ -23,27 +24,36 @@ export default function Hero() {
           >
             Innovative Software Engineer specializing in Blockchain Development with full-stack expertise and a global footprint.
           </motion.p>
-          <motion.div
+          <motion.nav
             className="mt-10 flex items-center gap-x-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            aria-label="Hero navigation"
           >
             <a
               href="#work"
               className="gradient-button"
+              aria-describedby="explore-work-desc"
             >
               Explore My Work
             </a>
+            <span id="explore-work-desc" className="sr-only">
+              View portfolio projects and development work
+            </span>
             
             <a
               href="#about"
               className="text-sm font-semibold leading-6 text-foreground"
+              aria-describedby="learn-more-desc"
             >
               Learn more <span aria-hidden="true">→</span>
             </a>
-          </motion.div>
-        </div>
+            <span id="learn-more-desc" className="sr-only">
+              Learn more about Rocio Ferreiro's background and experience
+            </span>
+          </motion.nav>
+        </header>
         <motion.div
           className="mx-auto mt-16 lg:mt-0"
           initial={{ opacity: 0, x: 20 }}
@@ -61,7 +71,7 @@ export default function Hero() {
             {/* Hero image */}
             <img
               src="hero_image.png"
-              alt="Developer"
+              alt="Rocio Ferreiro - Software Engineer and Blockchain Developer"
               width={400}
               height={400}
               className="relative z-10 w-[400px] rounded-2xl"
@@ -69,6 +79,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 }

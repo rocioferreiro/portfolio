@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://rocioferreiro.com/sitemap.xml
+
+# Disallow private or unnecessary paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
