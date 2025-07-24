@@ -3,11 +3,17 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import PerformanceMonitor from "./components/PerformanceMonitor"
 import type React from "react"
 import { Toaster } from "react-hot-toast"
 import { Analytics } from "@vercel/analytics/next"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
+})
 
 export const metadata = {
   title: {
@@ -84,6 +90,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         
+        {/* Preload critical resources */}
+        <link rel="preload" href="/hero_image.png" as="image" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        
         {/* Essential Open Graph meta tags for WhatsApp and social sharing */}
         <meta property="og:title" content="Rocio Ferreiro | Software & Blockchain Engineer" />
         <meta property="og:description" content="Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3." />
@@ -106,6 +117,9 @@ export default function RootLayout({
         {/* WhatsApp specific optimization */}
         <meta property="og:image:secure_url" content="https://rocioferreiro.com/og-image.png" />
         <meta property="og:image:type" content="image/png" />
+        
+        {/* Performance optimization */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -165,6 +179,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} min-h-screen bg-background text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <PerformanceMonitor />
           <Toaster position="bottom-right" />
           <Header />
           <main>{children}</main>

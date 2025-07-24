@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function Hero() {
   return (
@@ -10,9 +11,9 @@ export default function Hero() {
           <motion.h1
             id="hero-heading"
             className="mt-10 text-4xl font-bold text-foreground sm:text-6xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
           >
             <span className="text-gradient font-title">Rocio Ferreiro</span>
             <br />
@@ -20,21 +21,21 @@ export default function Hero() {
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-muted-foreground"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
             Innovative Software Engineer specializing in Blockchain Development with full-stack expertise. Building innovative solutions with React, Web3, and modern development technologies.
           </motion.p>
           <motion.nav
             className="mt-10 flex items-center gap-x-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             aria-label="Hero navigation"
           >
             <a
-              href="#work"
+              href="#portfolio"
               className="gradient-button"
               aria-describedby="explore-work-desc"
             >
@@ -58,9 +59,9 @@ export default function Hero() {
         </header>
         <motion.div
           className="mx-auto mt-16 lg:mt-0"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="relative flex items-center justify-center">
             {/* Gradient pulse background */}
@@ -71,12 +72,14 @@ export default function Hero() {
               <span className="block w-[440px] h-[320px] rounded-[45%] bg-gradient-to-tr from-[#EC008C] to-[#FC6767] opacity-40 blur-2xl animate-pulse-gradient"></span>
             </span>
             {/* Hero image */}
-            <img
-              src="hero_image.png"
+            <Image
+              src="/hero_image.png"
               alt="Rocio Ferreiro - Software Engineer and Blockchain Developer"
               width={400}
               height={400}
+              priority
               className="relative z-10 w-[400px] rounded-2xl"
+              sizes="(max-width: 768px) 300px, 400px"
             />
           </div>
         </motion.div>

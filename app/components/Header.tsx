@@ -34,7 +34,7 @@ export default function Header() {
         {/* Desktop nav */}
         <div className="hidden md:flex gap-x-12">
           <Link
-            href="#work"
+            href="#portfolio"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
           >
             Work
