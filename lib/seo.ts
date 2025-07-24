@@ -11,7 +11,7 @@ interface SEOConfig {
 
 export function generateSEOMetadata({
   title = "Rocio Ferreiro | Software & Blockchain Engineer",
-  description = "Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development.",
+  description = "Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3.",
   keywords = [],
   canonical,
   ogImage = "https://www.rocioferreiro.com/hero_image.png",
@@ -94,7 +94,7 @@ export function generateStructuredData() {
           "https://twitter.com/rocioferreiro"
         ],
         jobTitle: "Software Engineer",
-        description: "Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development.",
+        description: "Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3.",
         worksFor: {
           "@type": "Organization",
           name: "R3AL Blocks"

@@ -2,7 +2,7 @@
 export const siteConfig = {
   name: "Rocio Ferreiro",
   title: "Rocio Ferreiro | Software & Blockchain Engineer",
-  description: "Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Node.js, Solidity, and modern web technologies.",
+  description: "Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3.",
   url: "https://rocioferreiro.com",
   ogImage: "https://www.rocioferreiro.com/hero_image.png",
   creator: "@rocioferreiro",

@@ -122,7 +122,7 @@ export default function PortfolioGrid() {
       )
 
   return (
-    <section className="py-20 bg-background" id="work">
+    <section className="py-20 bg-background" id="portfolio">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -130,9 +130,10 @@ export default function PortfolioGrid() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">My Work</h2>
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl" aria-label="Rocio Ferreiro Software Engineering Projects">My work</h2>
+          <h3 className="text-xl font-semibold text-foreground mt-2" aria-label="Blockchain Development & Innovation Solutions">Innovative Solutions</h3>
           <p className="mt-4 text-lg text-muted-foreground">
-            A showcase of my projects and solutions.
+            A showcase of my software engineering projects, blockchain development solutions, and innovation development work.
           </p>
         </motion.div>
 

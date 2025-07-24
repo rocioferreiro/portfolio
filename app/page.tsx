@@ -8,11 +8,11 @@ import Marquee from "./components/Marquee"
 import ContactForm from "./components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Rocio Ferreiro | Software & Blockchain Engineer Portfolio",
-  description: "Welcome to Rocio Ferreiro's portfolio. Discover innovative software engineering projects, blockchain applications, and full-stack development work. Expert in React, Next.js, Solidity, and modern web technologies.",
+  title: "Rocio Ferreiro | Software & Blockchain Engineer",
+  description: "Software Engineer specializing in blockchain development. Expert in React, Next.js, Solidity, and Web3. View my portfolio and projects.",
   openGraph: {
-    title: "Rocio Ferreiro | Software & Blockchain Engineer Portfolio",
-    description: "Welcome to Rocio Ferreiro's portfolio. Discover innovative software engineering projects, blockchain applications, and full-stack development work.",
+    title: "Rocio Ferreiro | Software & Blockchain Engineer",
+    description: "Software Engineer specializing in blockchain development. Expert in React, Next.js, Solidity, and Web3. View my portfolio and projects.",
     url: "https://rocioferreiro.com",
   },
 }

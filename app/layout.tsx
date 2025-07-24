@@ -14,7 +14,7 @@ export const metadata = {
     default: "Rocio Ferreiro | Software & Blockchain Engineer",
     template: "%s | Rocio Ferreiro"
   },
-  description: "Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Node.js, Solidity, and modern web technologies.",
+  description: "Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3.",
   keywords: [
     "Rocio Ferreiro",
     "Software Engineer",
@@ -39,7 +39,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Rocio Ferreiro | Software & Blockchain Engineer",
-    description: "Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. View my portfolio and projects.",
+    description: "Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3.",
     url: "https://rocioferreiro.com",
     siteName: "Rocio Ferreiro Portfolio",
     images: [
@@ -57,7 +57,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rocio Ferreiro | Software & Blockchain Engineer",
-    description: "Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development.",
+    description: "Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3.",
     images: ["https://rocioferreiro.com/og-image.png"],
     creator: "@rocioferreiro",
   },
@@ -86,11 +86,11 @@ export default function RootLayout({
         
         {/* Essential Open Graph meta tags for WhatsApp and social sharing */}
         <meta property="og:title" content="Rocio Ferreiro | Software & Blockchain Engineer" />
-        <meta property="og:description" content="Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. View my portfolio and projects." />
+        <meta property="og:description" content="Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3." />
         <meta property="og:image" content="https://rocioferreiro.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Rocio Ferreiro - Software & Blockchain Engineer Portfolio" />
+        <meta property="og:image:alt" content="Rocio Ferreiro - Software & Blockchain Engineer" />
         <meta property="og:url" content="https://rocioferreiro.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Rocio Ferreiro Portfolio" />
@@ -99,7 +99,7 @@ export default function RootLayout({
         {/* Twitter Card meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rocio Ferreiro | Software & Blockchain Engineer" />
-        <meta name="twitter:description" content="Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development." />
+        <meta name="twitter:description" content="Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. Expert in React, Next.js, Solidity, and Web3." />
         <meta name="twitter:image" content="https://rocioferreiro.com/og-image.png" />
         <meta name="twitter:creator" content="@rocioferreiro" />
         

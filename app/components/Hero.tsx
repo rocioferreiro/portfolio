@@ -15,6 +15,8 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-gradient font-title">Rocio Ferreiro</span>
+            <br />
+            <span className="text-xl mt-2 block text-muted-foreground">Software Engineer & Blockchain Developer</span>
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-muted-foreground"
@@ -22,7 +24,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Innovative Software Engineer specializing in Blockchain Development with full-stack expertise and a global footprint.
+            Innovative Software Engineer specializing in Blockchain Development with full-stack expertise. Building innovative solutions with React, Web3, and modern development technologies.
           </motion.p>
           <motion.nav
             className="mt-10 flex items-center gap-x-6"

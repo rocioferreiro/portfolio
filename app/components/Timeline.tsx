@@ -113,7 +113,7 @@ export default function Timeline() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">My Journey</h2>
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl" aria-label="Rocio Ferreiro Professional Journey" aria-describedby="Software Engineer & Blockchain Developer Experience">My Journey</h2>
           <p className="mt-4 text-lg text-muted-foreground">A look at the experiences and learning that brought me here.</p>
         </motion.div>
 

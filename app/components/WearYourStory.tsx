@@ -12,11 +12,12 @@ export default function WearYourStory() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-4xl font-title sm:text-5xl md:text-6xl font-bold text-foreground mb-6">About me</h2>
+          <h2 className="text-4xl font-title sm:text-5xl md:text-6xl font-bold text-foreground mb-6" aria-label="About Rocio Ferreiro">About me</h2>
+          <h3 className="text-2xl font-semibold text-foreground mb-4" aria-label="Software Engineer & Blockchain Developer"></h3>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            I’m a Computer Engineer with hands-on experience in full-stack development, blockchain solutions, and automation. 
-            Currently serving as CTO at R3AL Blocks, I focus on shaping the technical direction and architecture of our asset tokenization platform with an emphasis on scalability and security. 
-            My background includes roles at IBM and several startups in Argentina and Canada, where I’ve worked across teams to build and deliver meaningful digital products.
+            I'm a Computer Engineer with hands-on experience in full-stack development, blockchain solutions, and innovation development. 
+            Currently serving as CTO at R3AL Blocks, I focus on building innovative blockchain projects and development solutions with an emphasis on scalability and security. 
+            My background includes roles at IBM and several startups in Argentina and Canada, where I've worked across teams to build and deliver meaningful software engineering projects.
           </p>
           <motion.div
             className="mt-10"
@@ -25,7 +26,7 @@ export default function WearYourStory() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <a
-              href="#work"
+              href="#portfolio"
               className="gradient-button inline-flex items-center"
             >
               Explore Projects
