@@ -44,10 +44,11 @@ export const metadata = {
     siteName: "Rocio Ferreiro Portfolio",
     images: [
       {
-        url: "https://rocioferreiro.com/og-image.png",
+        url: "/og-image.png", // Use relative URL for better compatibility
         width: 1200,
         height: 630,
         alt: "Rocio Ferreiro - Software & Blockchain Engineer Portfolio",
+        type: "image/png",
       },
     ],
     locale: "en_US",
@@ -82,6 +83,30 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        
+        {/* Essential Open Graph meta tags for WhatsApp and social sharing */}
+        <meta property="og:title" content="Rocio Ferreiro | Software & Blockchain Engineer" />
+        <meta property="og:description" content="Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development. View my portfolio and projects." />
+        <meta property="og:image" content="https://rocioferreiro.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Rocio Ferreiro - Software & Blockchain Engineer Portfolio" />
+        <meta property="og:url" content="https://rocioferreiro.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Rocio Ferreiro Portfolio" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Rocio Ferreiro | Software & Blockchain Engineer" />
+        <meta name="twitter:description" content="Experienced Software Engineer specializing in blockchain development, full-stack web applications, and mobile development." />
+        <meta name="twitter:image" content="https://rocioferreiro.com/og-image.png" />
+        <meta name="twitter:creator" content="@rocioferreiro" />
+        
+        {/* WhatsApp specific optimization */}
+        <meta property="og:image:secure_url" content="https://rocioferreiro.com/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
+        
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
