@@ -65,12 +65,7 @@ export default function Footer() {
             </div>
             {/* Email or extra info */}
             <div className="mt-4">
-              <a
-                href="mailto:rocioferreirorico@gmail.com"
-                className="text-sm text-muted-foreground hover:text-primary transition"
-              >
-                rocioferreirorico@gmail.com
-              </a>
+              
             </div>
             {/* Copyright */}
             <p className="text-xs text-muted-foreground mt-4">

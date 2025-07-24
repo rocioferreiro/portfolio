@@ -19,12 +19,13 @@ const nextConfig = {
   // Generate static exports for better SEO
   trailingSlash: false,
   
-  // Performance optimizations
+  // HTTP/2 Server Push (for development)
   experimental: {
     optimizePackageImports: ['framer-motion', '@heroicons/react'],
+    serverMinification: true,
   },
   
-  // Security headers
+  // Security headers with HTTP/2 optimization
   async headers() {
     return [
       {
@@ -45,6 +46,11 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+          // HTTP/2 Server Push hints
+          {
+            key: 'Link',
+            value: '</hero_image.png>; rel=preload; as=image',
           },
         ],
       },

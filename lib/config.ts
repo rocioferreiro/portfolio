@@ -8,7 +8,7 @@ export const siteConfig = {
   creator: "@rocioferreiro",
   
   // Contact information
-  email: "rocio.m.ferreiro@gmail.com",
+  emailEncoded: "cm9jaW8ubS5mZXJyZWlyb0BnbWFpbC5jb20=", // Base64 encoded email
   github: "https://github.com/rocioferreiro",
   linkedin: "https://linkedin.com/in/rocio-ferreiro",
   twitter: "https://twitter.com/rocioferre40871",

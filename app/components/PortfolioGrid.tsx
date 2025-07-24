@@ -88,9 +88,8 @@ export default function PortfolioGrid() {
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    fill
+                    className="transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover"
                   />
                   <motion.div
                     className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300"
